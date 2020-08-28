@@ -50,7 +50,7 @@ export default class ChartAdmin extends Component
                 display: true,
                 text: "Performances",
                 fontSize: 25,
-                fontColor: "#C4B7A9"
+                fontColor: "#FA9E6B"
                
                 }}} />
         </div>

@@ -74,7 +74,7 @@ export default class DynamicTable extends Component {
   render(){
     return (
       <div>
-        <Notification/>
+          <h1 style={{color: '#FA9E6B'}}>Tableau de réclamations</h1>
       <div>
          <img src={require("../images/search-table.png")} className="img-search"/>
       <input id="search" type="text" className="form-research"  placeholder="Rechercher : .........................................."></input>

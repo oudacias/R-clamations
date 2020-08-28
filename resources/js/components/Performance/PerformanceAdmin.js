@@ -36,6 +36,8 @@ componentDidMount(){
         return (
             <div>
             <div className="container" style={{marginLeft:"15%"}}>
+            <h1 style={{color: '#FA9E6B'}}>Balance</h1>
+
                 <div className="row" >
                     <div className="col-md-5" style={{marginBottom:"5%"}}>
                             <div className="card-content info-performance">
