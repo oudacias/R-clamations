@@ -1,0 +1,144 @@
+.jour{
+  color :orange;
+  text-align: left;
+  font-size: 30px;
+  padding: 0px;
+  margin-left: -40px;
+}
+.mois{
+  text-align: right;
+  color: #46C2FF;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -35px;
+  
+}
+.jours{
+  text-align: right;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -15px;
+  color: #46C2FF;
+  font-size: small;
+}
+.supprimer{
+  background-color: #C4B7A9;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.img-table{
+  width: 10px;
+  position: absolute;
+}
+
+
+#ceo th,
+#ceo td {
+padding: 10px 30px;
+}
+
+th {
+  background: #333;
+  background-color: #606060;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow:20px 20px 20px rgb(51, 51, 51);  
+
+
+}
+
+#ceo th.asc:after {
+  display: inline;
+}
+
+#ceo th.desc:after {
+  display: inline;
+}
+
+.td-dynamic {
+  background: #20202C;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow:20px 20px 20px rgb(73, 73, 73);  
+
+}
+.table-dynamic{
+  margin: auto;
+width: 70%;
+padding: 10px;
+  border-spacing: 0px 15px;
+  
+}
+
+.date-td{
+  color: #46C2FF;
+}
+
+
+
+
+.inbox-td{
+  background: white;
+  text-align: center;
+  box-shadow:20px 20px 20px #8a8a8a;
+  border-top: solid 1px #c1b5b5;
+  border-bottom: solid 1px #c1b5b5;
+  text-align: left;
+  width: 200px;
+
+
+}
+.table-inbox{
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  border-spacing: 0px 5px;
+  height: 10px;
+  
+}
+
+.user-inbox-td{
+  width:40px;
+  float: left;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 2px;
+  
+}
+.read-inbox-td{
+  width: 40%;
+  float: right;
+}
+
+
+.form-research{
+  background-color: #C4B7A9;
+  height: 60px;
+  float: right;
+  border-color: transparent;
+  width: 300px;
+  margin-top: 40px;
+  margin-right: 10px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+}
+.img-search{
+  float: right;
+  width: 40px;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+.lu{
+  text-decoration: underline;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  color:#FC6F21;
+}

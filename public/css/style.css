@@ -1,0 +1,9 @@
+body {
+margin: 0px;
+font-family: 'Varela', sans-serif;
+font-size: 14px;
+line-height: 1.5;
+background-color: #747474;
+  min-width: 98%;
+  position: absolute;
+}
