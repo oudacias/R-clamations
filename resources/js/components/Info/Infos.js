@@ -62,7 +62,7 @@ export default class Infos extends Component{
                                                 <div key={user.id}>
                                                 <div style={{  marginLeft:'30%' }} className="image-upload">
                                                     <label htmlFor="file-input">
-                                                        <img style={{width:"150px"}} className="user-info-img" src={`../${user.image_profil}`}/>
+                                                        <img style={{width:"150px"}} className="user-info-img" src={`..${user.image_profil}`}/>
                                                     </label>
                                                     <input  id="file-input" type="file" name="lien_image" onChange={this.handleInputChange} alt="submit"/>
 

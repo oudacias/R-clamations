@@ -17,7 +17,7 @@ export default class ProfileAdmin extends Component{
         return (
             <div>
             <LeftMenu/>
-            <div id="s1" style={{marginTop:"100px"}}>
+            <div id="s1" style={{marginTop:"200px"}}>
                 <Info/>
             </div>
             <div id="s2" style={{marginTop:"200px"}}>

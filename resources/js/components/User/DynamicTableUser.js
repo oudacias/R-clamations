@@ -103,7 +103,7 @@ export default class DynamicTableUser extends Component {
                   this.state.plaintes.map(plainte=>{
                     return (
                               <tr>
-                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at), 'dd/MM/yyyy')}</td>
+                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at_plainte), 'dd/MM/yyyy')}</td>
                                 <td className="td-dynamic">{plainte.titre_plainte}</td>
                                 <td className="td-dynamic">{plainte.type_plainte}</td>
                                 <td className="td-dynamic">{plainte.etat_plainte}</td>

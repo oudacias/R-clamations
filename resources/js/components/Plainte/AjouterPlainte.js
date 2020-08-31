@@ -19,7 +19,7 @@ export default class AjouterPlainte extends Component{
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.state = {
-            utilisateur_id: '1',
+            utilisateur_id: '',
             titre_plainte: '',
             type_plainte: '',
             priorite_id: '1',

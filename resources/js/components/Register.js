@@ -70,6 +70,9 @@ export default class Register extends Component{
             password: this.state.password
         }
         axios.post('http://localhost:8000/register',register).then(function (response) {
+            window.location.reload(false);
+            $("#notification-success").show()
+
 
         },
         (error) => {

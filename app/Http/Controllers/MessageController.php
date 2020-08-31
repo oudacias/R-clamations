@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Message;
 use DB;
+use Auth;
 
 class MessageController extends Controller
 {
@@ -12,7 +13,7 @@ class MessageController extends Controller
     public function EnvoyerMessage(Request $r)
     {
         $message = new Message();
-        $message->id_expediteur = 1;
+        $message->id_expediteur = Auth::id();
         $message->id_destinateur = $r->id_destinateur;
         $message->sujet = $r->sujet;
         $message->message = $r->message;
@@ -22,7 +23,7 @@ class MessageController extends Controller
     {
         $message = DB::table('messages')->join('users','messages.id_expediteur','=','users.id')
         ->select('messages.id as message_id','messages.*','users.*')
-        ->where('messages.id_destinateur','=','1')
+        ->where('messages.id_destinateur','=',Auth::id())
         ->where('messages.lu','=','0')
         ->orderBy('messages.created_at','desc')
         ->get();

@@ -31,7 +31,7 @@ class UserController extends Controller
         $user = User::find(Auth::id());
         $file = $r->file('file');
         $file->move(base_path('public/image_profile'), $user->id.'.'.$file->getClientOriginalExtension());
-        $user->image_profil = 'image_profile/'.$user->id.'.'.$file->getClientOriginalExtension();
+        $user->image_profil = '/image_profile/'.$user->id.'.'.$file->getClientOriginalExtension();
         $user->save();
     }
     public function Disconnect(Request $r) {

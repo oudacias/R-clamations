@@ -23,15 +23,15 @@
   
   
   
-  ul.wui-side-menu-items {list-style: none;padding-bottom:10;width: 80px;margin-top: 50px;}
+  ul.wui-side-menu-items {list-style: none;padding-bottom:10;width: 80px;margin-top: 10px;}
   
   li{
 
       padding-bottom: 10px;
-      margin-left: 15px
+      margin-left: 25px
   }
   .hr-menu{
       width: 90%;
-      margin-left: -20%;
+      margin-left: 10%;
       color: black;
   }

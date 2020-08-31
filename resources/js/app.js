@@ -18,7 +18,6 @@ require('./components/Register');
 require('./components/Admin/ProfileAdmin');
 require('./components/User/ProfileUser');
 require('./components/User/AfficherPlainte');
-require('./components/Admin/Plainte');
 require('./components/User/ChartUser');
 require('./components/Admin/DynamicTable');
 require('./components/User/DynamicTableUser');

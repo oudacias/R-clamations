@@ -74,7 +74,7 @@ export default class DynamicTable extends Component {
   render(){
     return (
       <div>
-          <h1 style={{color: '#FA9E6B'}}>Tableau de réclamations</h1>
+          <h1 style={{color: '#FA9E6B',marginLeft:"17%"}}>Tableau de réclamations</h1>
       <div>
          <img src={require("../images/search-table.png")} className="img-search"/>
       <input id="search" type="text" className="form-research"  placeholder="Rechercher : .........................................."></input>
@@ -98,7 +98,7 @@ export default class DynamicTable extends Component {
                   this.state.plaintes.map(plainte=>{
                     return (
                               <tr>
-                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at), 'dd/MM/yyyy')}</td>
+                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at_plainte), 'dd/MM/yyyy')}</td>
                                 <td className="td-dynamic">{plainte.titre_plainte}</td>
                                 <td className="td-dynamic">{plainte.type_plainte}</td>
                                 <td className="td-dynamic">{plainte.etat_plainte}</td>

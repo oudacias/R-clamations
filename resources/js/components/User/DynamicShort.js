@@ -79,7 +79,7 @@ export default class DynamicShort extends Component {
     return (
       <div>
         <Notification/>
-      <div >
+      <div style={{  marginTop:'10%' }}>
          <img src={require("../images/search-table.png")} className="img-search"/>
       <input id="search" type="text" className="form-research"  placeholder="Rechercher : .........................................."></input>
         <table className="table-dynamic" id='ceo'>
@@ -102,7 +102,7 @@ export default class DynamicShort extends Component {
                   this.state.plaintes.map(plainte=>{
                     return (
                               <tr>
-                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at), 'dd/MM/yyyy')}</td>
+                                <td className="date-td td-dynamic">{format(new Date(plainte.created_at_plainte), 'dd/MM/yyyy')}</td>
                                 <td className="td-dynamic">{plainte.titre_plainte}</td>
                                 <td className="td-dynamic">{plainte.type_plainte}</td>
                                 <td className="td-dynamic">{plainte.etat_plainte}</td>

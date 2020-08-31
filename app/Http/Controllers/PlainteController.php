@@ -17,9 +17,12 @@ class PlainteController extends Controller
     public function AjouterPlainte(Request $r)
     {
         $plainte = new Plainte();
+        if($r->utilisateur_id){
         $plainte->utilisateur_id = $r->utilisateur_id ;
-        $plainte->administrateur_id = 1;
-        //$plainte->administrateur_id = Auth::id();
+        }else{
+            $plainte->utilisateur_id = User::where('role','=','user')->first()->id;
+        }
+        $plainte->administrateur_id = Auth::id();
         $plainte->priorite_id = $r->priorite_id ;
         $plainte->type_plainte = $r->type_plainte ;
         $plainte->titre_plainte = $r->titre_plainte ;
@@ -45,7 +48,7 @@ class PlainteController extends Controller
     public function listerPlainteUser(){
         $plaintes = DB::table('plaintes')->join('priorites','plaintes.priorite_id','=','priorites.id')
                                         ->leftJoin('piecejointes','plaintes.piecejointe_id','=','piecejointes.id')
-                                        ->select('plaintes.id as plainte_id','plaintes.*','priorites.*')
+                                        ->select('plaintes.id as plainte_id','plaintes.*','plaintes.created_at as created_at_plainte','priorites.*','piecejointes.*')
                                         ->where('plaintes.utilisateur_id','=',Auth::id())
                                         ->get();
         return $plaintes;
@@ -53,7 +56,7 @@ class PlainteController extends Controller
     public function listerPlainteUserShort(){
         $plaintes = DB::table('plaintes')->join('priorites','plaintes.priorite_id','=','priorites.id')
                                         ->leftJoin('piecejointes','plaintes.piecejointe_id','=','piecejointes.id')
-                                        ->select('plaintes.id as plainte_id','plaintes.*','priorites.*')
+                                        ->select('plaintes.id as plainte_id','plaintes.*','plaintes.created_at as created_at_plainte','priorites.*')
                                         ->where('plaintes.utilisateur_id','=',Auth::id())
                                         ->orderBy('plaintes.created_at')
                                         ->limit(5)
@@ -63,7 +66,7 @@ class PlainteController extends Controller
     public function listerPlainteAdmin(){
         $plaintes = DB::table('plaintes')->join('priorites','plaintes.priorite_id','=','priorites.id')
                                         ->leftJoin('piecejointes','plaintes.piecejointe_id','=','piecejointes.id')
-                                        ->select('plaintes.id as plainte_id','plaintes.*','priorites.*')
+                                        ->select('plaintes.id as plainte_id','plaintes.*','plaintes.created_at as created_at_plainte','priorites.*')
                                         ->where('plaintes.administrateur_id','=',Auth::id())
                                         ->get();
         return $plaintes;
@@ -77,8 +80,7 @@ class PlainteController extends Controller
     public function listUser()
     {
         
-        $user = User::where('id','<>',1)
-                        ->where('role','=','user')
+        $user = User::where('id','<>',Auth::id())
                         ->get();
         return $user;
     }

@@ -27,6 +27,8 @@ export default class HorizontalMenu extends Component{
         <div>
             <Router>
                 <div className="container">
+                <img src={require('../images/commune.png')} style={{width:"20%",marginLeft:"10%"}}/>
+
                     <nav>
                         <ul>
                             <li>
@@ -35,7 +37,7 @@ export default class HorizontalMenu extends Component{
                             <li>
                             <Link className="amenu" to="/profile">Profile</Link>
                             </li>
-                            <button onClick={this.disconnectHandle.bind(this)} class="disconnect">Se déconnercter</button>
+                            <li><button onClick={this.disconnectHandle.bind(this)} class="disconnect">Se déconnercter</button></li>
                         </ul>
                     </nav>
                     

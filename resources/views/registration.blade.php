@@ -15,8 +15,15 @@
     <body style="
     background-color: #747474;"
 }>
-<div id="register"></div>
-
+        @if(Auth::check())
+            @if(Auth::user()->role == 'admin')
+                <div id="horizontalmenuadmin"></div>
+            @elseif(Auth::user()->role == 'user')
+                <div id="horizontalmenu"></div>
+            @endif
+        @else
+            <div id="register"></div>
+        @endif
     </body>
     <script src="/js/app.js"></script>
 
